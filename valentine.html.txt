@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>For You ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px 25px;
+            margin: 20px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #yesBtn {
+            position: relative;
+        }
+
+        #message {
+            font-size: 30px;
+            color: red;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Will you be my Valentine? 💖</h1>
+
+<button id="yesBtn" onclick="sayYes()">Yes 💕</button>
+<button id="noBtn">No 😢</button>
+
+<div id="message"></div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", function() {
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 100);
+
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    function sayYes() {
+        document.getElementById("message").innerHTML =
+            "Yayyyyy 💘 I love youuuuuuuuu!";
+    }
+</script>
+
+</body>
+</html>
